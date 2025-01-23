@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:pawfectmatch/core/constants/color_constants.dart';
+import 'package:pawfectmatch/features/details/view/detailscreen_view.dart';
 import 'package:pawfectmatch/features/home/view/search_screen_view.dart';
 import '../../../domain/model/pet/pet_model.dart';
 import '../../../utils/results.dart';
@@ -246,6 +247,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+
     final petsResult = ref.watch(petViewModelProvider);
     return Scaffold(
       backgroundColor: Colors.white,
@@ -440,59 +442,64 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       childCount: paginatedPets.length,
                           (context, index) {
                         final pet = paginatedPets[index];
-                        return Container(
-                          decoration: BoxDecoration(
-                            color: ColorConstants.offWhite,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              // Image
-                              Container(),
-                              // Name and Breed
-                              Spacer(),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 18.0, vertical: 20),
-                                child: Row(
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          pet.name,
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
+                        return GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailScreen(pet)));
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: ColorConstants.offWhite,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Image
+                                Container(),
+                                // Name and Breed
+                                Spacer(),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 18.0, vertical: 20),
+                                  child: Row(
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            pet.name,
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
-                                        ),
-                                        Text(
+                                          Text(
 
-                                          pet.breed,
-                                          style: TextStyle(
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
+                                            pet.breed.length>12?pet.breed.substring(0,12):pet.breed,
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          '\$${pet.price.toString()}',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
+                                          Text(
+                                            '\$${pet.price.toString()}',
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    Spacer(),
-                                    Container(decoration: BoxDecoration(color:pet.isAdopted? Colors.green:ColorConstants.orange,borderRadius: BorderRadius.circular(10)),child: Padding(
-                                      padding: const EdgeInsets.all(7.0),
-                                      child:pet.isAdopted? Text("Adopted",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),):Text("Details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),),
-                                    ),),
-                                  ],
+                                        ],
+                                      ),
+                                      Spacer(),
+                                      Container(decoration: BoxDecoration(color:pet.isAdopted? Colors.green:ColorConstants.orange,borderRadius: BorderRadius.circular(10)),child: Padding(
+                                        padding: const EdgeInsets.all(7.0),
+                                        child:pet.isAdopted? Text("Adopted",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),):Text("Details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),),
+                                      ),),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         );
                       },

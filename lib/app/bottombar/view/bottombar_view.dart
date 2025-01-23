@@ -5,6 +5,7 @@ import 'package:pawfectmatch/core/constants/color_constants.dart';
 import 'package:pawfectmatch/features/history/view/history_screen.dart';
 import 'package:pawfectmatch/features/home/view/homescreen_view.dart';
 
+import '../../../features/details/view/detailscreen_view.dart';
 import '../viewmodel/bottombar_viewmodel.dart';
 
 class KNavigationBar extends ConsumerWidget {
@@ -16,7 +17,7 @@ class KNavigationBar extends ConsumerWidget {
     final viewModel = ref.read(kNavigationBarViewModelProvider.notifier);
 
     final List<Widget> _pages = [
-       HomeScreen(),
+      HomeScreen(),
       const AdoptionHistoryScreen(),
     ];
 

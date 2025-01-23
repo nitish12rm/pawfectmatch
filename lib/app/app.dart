@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/constants/color_constants.dart';
+import '../features/details/view/detailscreen_view.dart';
 import 'bottombar/view/bottombar_view.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         darkTheme: darkTheme, // Dark theme
         themeMode: ThemeMode.light,
         title: 'Flutter Demo',
-        home:  KNavigationBar()
+        home: KNavigationBar()
     );
   }
 }

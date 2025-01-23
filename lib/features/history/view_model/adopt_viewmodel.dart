@@ -8,13 +8,15 @@ class PetAdoptionViewModel extends StateNotifier<List<PetModel>> {
   PetAdoptionViewModel() : super([]);
 
   // Fetch all pets
-  void fetchPets() {
-    state = _repository.getPets();
+  void fetchPets() async {
+    final pets = await _repository.getPets(); // Fetch the updated list
+    state = List.from(pets); // Ensure a new instance of the list
   }
 
   // Adopt a pet
   Future<void> adoptPet(PetModel pet) async {
     await _repository.adoptPet(pet);
+
     fetchPets(); // Refresh the list
   }
 

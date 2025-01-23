@@ -9,25 +9,86 @@ class AdoptionHistoryScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final viewModel = ref.read(petAdoptionViewModelProvider.notifier);
-    // Fetch the adopted pets in chronological order
-    final adoptedPets = viewModel.getAdoptedPets();
+    // Fetch the adopted pets and reverse the list
+    final adoptedPets = viewModel.getAdoptedPets().reversed.toList();
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Adoption History'),
+        title: const Text(
+          'Adoption History',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 24,
+          ),
+        ),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
       ),
-      body: ListView.builder(
-        itemCount: adoptedPets.length,
-        itemBuilder: (context, index) {
-          final pet = adoptedPets[index];
-          return ListTile(
-            leading: pet.imageUrl.isNotEmpty
-                ? Image.network(pet.imageUrl.first)
-                : const Icon(Icons.pets),
-            title: Text(pet.name),
-            subtitle: Text('Adopted on: ${pet.breed.toString()}'),
-            trailing: Text('\$${pet.price}'),
-          );
-        },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: adoptedPets.length,
+          itemBuilder: (context, index) {
+            final pet = adoptedPets[index];
+            return Card(
+              elevation: 2,
+              margin: const EdgeInsets.symmetric(vertical: 8),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: ListTile(
+                contentPadding: const EdgeInsets.all(16),
+                leading: CircleAvatar(
+                  radius: 30,
+                  backgroundImage: pet.imageUrl.isNotEmpty
+                      ? NetworkImage(pet.imageUrl.first)
+                      : null,
+                  child: pet.imageUrl.isEmpty
+                      ? const Icon(Icons.pets, size: 30)
+                      : null,
+                ),
+                title: Text(
+                  pet.name,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 4),
+                    Text(
+                      'Breed: ${pet.breed}',
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    // Text(
+                    //   'Adopted on: ${pet.adoptionDate}', // Assuming you have an adoptionDate field
+                    //   style: TextStyle(
+                    //     color: Colors.grey[600],
+                    //     fontSize: 14,
+                    //   ),
+                    // ),
+                  ],
+                ),
+                trailing: Text(
+                  '\$${pet.price}',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

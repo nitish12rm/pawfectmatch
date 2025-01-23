@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pawfectmatch/domain/model/pet/pet_model.dart';
 import 'package:pawfectmatch/utils/results.dart';
 
-
 import '../../details/view/detail_screen.dart';
 import '../view_model/home_viewmodel.dart';
 
@@ -85,9 +84,9 @@ class _PetListScreenState extends ConsumerState<PetListScreen> {
                           hint: const Text('Min Age'),
                           items: List.generate(20, (index) => index + 1)
                               .map((age) => DropdownMenuItem(
-                            value: age,
-                            child: Text('$age years'),
-                          ))
+                                    value: age,
+                                    child: Text('$age years'),
+                                  ))
                               .toList(),
                           onChanged: (value) {
                             setState(() {
@@ -108,9 +107,9 @@ class _PetListScreenState extends ConsumerState<PetListScreen> {
                           hint: const Text('Max Age'),
                           items: List.generate(20, (index) => index + 1)
                               .map((age) => DropdownMenuItem(
-                            value: age,
-                            child: Text('$age years'),
-                          ))
+                                    value: age,
+                                    child: Text('$age years'),
+                                  ))
                               .toList(),
                           onChanged: (value) {
                             setState(() {
@@ -212,16 +211,15 @@ class _PetListScreenState extends ConsumerState<PetListScreen> {
               data: (result) {
                 if (result is Ok<List<PetModel>>) {
                   // Filter pets based on the search query and filters
-                  final filteredPets = ref
-                      .read(petViewModelProvider.notifier)
-                      .filterPets(
-                    searchQuery: _searchQuery,
-                    minAge: _minAge,
-                    maxAge: _maxAge,
-                    minPrice: _minPrice,
-                    maxPrice: _maxPrice,
-                    breed: _selectedBreed,
-                  );
+                  final filteredPets =
+                      ref.read(petViewModelProvider.notifier).filterPets(
+                            searchQuery: _searchQuery,
+                            minAge: _minAge,
+                            maxAge: _maxAge,
+                            minPrice: _minPrice,
+                            maxPrice: _maxPrice,
+                            breed: _selectedBreed,
+                          );
 
                   if (filteredPets is Ok<List<PetModel>>) {
                     final pets = filteredPets.value;
@@ -244,28 +242,28 @@ class _PetListScreenState extends ConsumerState<PetListScreen> {
                             ),
                             title: Text(pet.name),
                             subtitle:
-                            Text('Breed: ${pet.breed} - Age: ${pet.age}'),
+                                Text('Breed: ${pet.breed} - Age: ${pet.age}'),
                             trailing: pet.isAdopted
                                 ? const Text(
-                              'Adopted',
-                              style: TextStyle(
-                                color: Colors.green,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            )
+                                    'Adopted',
+                                    style: TextStyle(
+                                      color: Colors.green,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
                                 : ElevatedButton(
-                              onPressed: () {
-                                // Navigate to the PetDetailScreen
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        PetDetailScreen(pet: pet),
+                                    onPressed: () {
+                                      // Navigate to the PetDetailScreen
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              PetDetailScreen(pet: pet),
+                                        ),
+                                      );
+                                    },
+                                    child: const Text('View Details'),
                                   ),
-                                );
-                              },
-                              child: const Text('View Details'),
-                            ),
                           ),
                         );
                       },

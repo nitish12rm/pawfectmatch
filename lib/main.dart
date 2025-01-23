@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/adapters.dart';
 
+import 'core/constants/color_constants.dart';
 import 'domain/model/pet/hive_pet_model.dart';
+import 'features/history/view/history_screen.dart';
 import 'features/home/view/home_view.dart';
 
 void main() async{
@@ -22,7 +24,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+        theme: lightTheme, // Light theme
+        darkTheme: darkTheme, // Dark theme
+        themeMode: ThemeMode.light,
+        title: 'Flutter Demo',
       home:  PetListScreen()
     );
   }

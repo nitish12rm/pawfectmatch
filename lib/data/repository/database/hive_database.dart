@@ -6,7 +6,7 @@ import '../../../domain/model/pet/pet_model.dart';
 
 class PetAdoptionRepository {
   // Get the Hive box for pets
-  Box<HivePetModel> get _petsBox => Hive.box<HivePetModel>('pets');
+  Box<HivePetModel> get _petsBox => Hive.box<HivePetModel>('adopted_pets');
 
   // Adopt a pet
   Future<void> adoptPet(PetModel pet) async {

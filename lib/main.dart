@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/adapters.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'domain/model/pet/hive_pet_model.dart';
+import 'features/home/view/home_view.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter(); // Initialize Hive
+  Hive.registerAdapter(HivePetModelAdapter()); // Register the HivePetModel adapter
+  await Hive.openBox<HivePetModel>('adopted_pets'); // Open a Hive box for HivePetModel
+  runApp( const ProviderScope(child: MyApp()));
+
+
 }
 
 class MyApp extends StatelessWidget {
@@ -12,8 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-
-      home: const Placeholder()
+      home:  PetListScreen()
     );
   }
 }

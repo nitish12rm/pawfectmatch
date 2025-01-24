@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iconsax/iconsax.dart';
@@ -88,31 +89,48 @@ isAdopted=widget.pet.isAdopted;
                 child: Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
+
                     InteractiveViewer(
-                      child: Image.network(
-                        'https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
+                      child: Center(
+                        child: CarouselSlider.builder(
+                          itemCount: widget.pet.imageUrl.length,
+                          itemBuilder: (BuildContext context, int index, int realIndex) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.network(
+                                widget.pet.imageUrl[index],
+                                fit: BoxFit.cover,
+                                width: double.infinity,
+                              ),
+                            );
+                          },
+                          options: CarouselOptions(
+                            height: 400,
+                            enlargeCenterPage: true,
+                            enableInfiniteScroll: true,
+                            autoPlay: true,
+                          ),
+                        ),
                       ),
                     ),
                     // Current image indicator
-                    Positioned(
-                      bottom: 10,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(3, (index) {
-                          return Container(
-                            margin: const EdgeInsets.symmetric(horizontal: 4),
-                            width: 8,
-                            height: 8,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: index == 0 ? Colors.blue : Colors.grey,
-                            ),
-                          );
-                        }),
-                      ),
-                    ),
+                    // Positioned(
+                    //   bottom: 10,
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.center,
+                    //     children: List.generate(3, (index) {
+                    //       return Container(
+                    //         margin: const EdgeInsets.symmetric(horizontal: 4),
+                    //         width: 8,
+                    //         height: 8,
+                    //         decoration: BoxDecoration(
+                    //           shape: BoxShape.circle,
+                    //           color: index == 0 ? Colors.blue : Colors.grey,
+                    //         ),
+                    //       );
+                    //     }),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

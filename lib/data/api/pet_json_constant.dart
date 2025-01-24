@@ -128,9 +128,8 @@ const jsonString = '''
       "price": 140,
       "breed": "Rottweiler",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoMhjj4DRoGE0oOQkDKSQwAKb3y7lvlPYH_g&s",
-       
-      ],
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoMhjj4DRoGE0oOQkDKSQwAKb3y7lvlPYH_g&s"
+       ],
       "isAdopted": false
     },
     {
@@ -200,7 +199,7 @@ const jsonString = '''
       "price": 190,
       "breed": "Cocker Spaniel",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSohs_e6LeNXXOe48J_jbjgci70jNc46L94rw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSohs_e6LeNXXOe48J_jbjgci70jNc46L94rw&s"
       ],
       "isAdopted": false
     },
@@ -211,7 +210,7 @@ const jsonString = '''
       "price": 90,
       "breed": "Pug",
       "imageUrl": [
-        "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-sb10066858aa-001-e1693353192358.jpg",
+        "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-sb10066858aa-001-e1693353192358.jpg"
       ],
       "isAdopted": false
     },
@@ -234,7 +233,7 @@ const jsonString = '''
       "price": 110,
       "breed": "Border Collie",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCzGDLpLNCzoHmsoQyydxf_O52jazn56CdQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCzGDLpLNCzoHmsoQyydxf_O52jazn56CdQ&s"
 
       ],
       "isAdopted": false
@@ -258,7 +257,7 @@ const jsonString = '''
       "price": 95,
       "breed": "Maltese",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznVBAaAqY7w-itHeiTKVxcZqiT-XQ-smLvg&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznVBAaAqY7w-itHeiTKVxcZqiT-XQ-smLvg&s"
       ],
       "isAdopted": false
     },
@@ -317,7 +316,7 @@ const jsonString = '''
       "price": 90,
       "breed": "Cockatiel",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0YjKry50_ZLXilzTwYznA-LhouZMz3Nvsw&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0YjKry50_ZLXilzTwYznA-LhouZMz3Nvsw&s"
 
       ],
       "isAdopted": false
@@ -329,8 +328,8 @@ const jsonString = '''
       "price": 110,
       "breed": "Rabbit",
       "imageUrl": [
-        "https://example.com/snowball1.jpg",
-        "https://example.com/snowball2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3K1cDBAl-SnfHSaTUKSH0XIGLn9ZWyohpjA&s"
+      
       ],
       "isAdopted": false
     },
@@ -341,7 +340,7 @@ const jsonString = '''
       "price": 85,
       "breed": "Rabbit",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVA46zNCYKOEiMoCAwg9YAA079qOrosGp0BQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVA46zNCYKOEiMoCAwg9YAA079qOrosGp0BQ&s"
       ],
       "isAdopted": false
     },
@@ -352,7 +351,7 @@ const jsonString = '''
       "price": 120,
       "breed": "Rabbit",
       "imageUrl": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhpwtQUAVk7bV9ZDHI3xS0s8s9MH7C8_RgoA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhpwtQUAVk7bV9ZDHI3xS0s8s9MH7C8_RgoA&s"
 
       ],
       "isAdopted": false

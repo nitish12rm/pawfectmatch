@@ -13,7 +13,9 @@ class AdoptionHistoryScreen extends ConsumerWidget {
     final adoptedPets = viewModel.getAdoptedPets().reversed.toList();
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+
         title: const Text(
           'Adoption History',
           style: TextStyle(
@@ -21,17 +23,19 @@ class AdoptionHistoryScreen extends ConsumerWidget {
             fontSize: 24,
           ),
         ),
-        centerTitle: true,
+
         elevation: 0,
-        backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,
       ),
-      body: Padding(
+      body:adoptedPets.isEmpty?Center(child: Text("No Pets adopted yet"),): Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
           itemCount: adoptedPets.length,
           itemBuilder: (context, index) {
             final pet = adoptedPets[index];
+            // Debugging: Print the image URL
+            print('Image URL for ${pet.name}: ${pet.imageUrl[0]}');
+
             return Card(
               elevation: 2,
               margin: const EdgeInsets.symmetric(vertical: 8),
@@ -42,11 +46,13 @@ class AdoptionHistoryScreen extends ConsumerWidget {
                 contentPadding: const EdgeInsets.all(16),
                 leading: CircleAvatar(
                   radius: 30,
-                  backgroundImage: pet.imageUrl.isNotEmpty
-                      ? NetworkImage(pet.imageUrl.first)
-                      : null,
-                  child: pet.imageUrl.isEmpty
-                      ? const Icon(Icons.pets, size: 30)
+                  backgroundImage: NetworkImage(pet.imageUrl[0]),
+                  onBackgroundImageError: (exception, stackTrace) {
+                    // Debugging: Print the error
+                    print('Failed to load image: $exception');
+                  },
+                  child: pet.imageUrl[0].isEmpty
+                      ? const Icon(Icons.pets, size: 30) // Fallback icon if URL is empty
                       : null,
                 ),
                 title: Text(

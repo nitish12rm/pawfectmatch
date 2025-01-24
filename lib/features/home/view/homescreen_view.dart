@@ -455,12 +455,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 // Image
-                                Container(),
+                                Expanded(
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20), // Match container border radius
+                                    child: Image.network(
+                                      pet.imageUrl[0],
+                                      width: double.infinity, // Ensure the image takes full width
+                                      fit: BoxFit.cover, // Ensure the image covers the entire space
+                                      errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) {
+                                        return Center(
+                                          child: Icon(
+                                            Icons.error,
+                                            color: Colors.red,
+                                            size: 50,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ),
                                 // Name and Breed
-                                Spacer(),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 18.0, vertical: 20),
+                                  padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 20),
                                   child: Row(
                                     children: [
                                       Column(
@@ -474,8 +490,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                             ),
                                           ),
                                           Text(
-
-                                            pet.breed.length>12?pet.breed.substring(0,12):pet.breed,
+                                            pet.breed.length > 12
+                                                ? pet.breed.substring(0, 12)
+                                                : pet.breed,
                                             style: TextStyle(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w500,
@@ -491,10 +508,23 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                                         ],
                                       ),
                                       Spacer(),
-                                      Container(decoration: BoxDecoration(color:pet.isAdopted? Colors.green:ColorConstants.orange,borderRadius: BorderRadius.circular(10)),child: Padding(
-                                        padding: const EdgeInsets.all(7.0),
-                                        child:pet.isAdopted? Text("Adopted",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),):Text("Details",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white),),
-                                      ),),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: pet.isAdopted ? Colors.green : ColorConstants.orange,
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(7.0),
+                                          child: Text(
+                                            pet.isAdopted ? "Adopted" : "Details",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 10,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),

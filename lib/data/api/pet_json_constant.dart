@@ -8,8 +8,8 @@ const jsonString = '''
       "price": 100,
       "breed": "Golden Retriever",
       "imageUrl": [
-        "https://example.com/buddy1.jpg",
-        "https://example.com/buddy2.jpg"
+        "https://heronscrossing.vet/wp-content/uploads/Golden-Retriever-1024x683.jpg",
+        "https://images.ctfassets.net/m5ehn3s5t7ec/KtxCRW7y0LXNYcn6BHPPD/065b05bda2e516ea6a5887ce9856d1db/Golden_Retriever__Price.webp"
       ],
       "isAdopted": false
     },
@@ -20,8 +20,8 @@ const jsonString = '''
       "price": 150,
       "breed": "German Shepherd",
       "imageUrl": [
-        "https://example.com/max1.jpg",
-        "https://example.com/max2.jpg"
+        "https://www.bellaandduke.com/wp-content/uploads/2024/10/A-guide-to-German-Shepherds-characteristics-personality-lifespan-and-more-featured-image.webp",
+        "https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg"
       ],
       "isAdopted": false
     },
@@ -32,8 +32,8 @@ const jsonString = '''
       "price": 120,
       "breed": "Bulldog",
       "imageUrl": [
-        "https://example.com/bella1.jpg",
-        "https://example.com/bella2.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Bulldog_inglese.jpg/800px-Bulldog_inglese.jpg",
+        "https://cdn.britannica.com/07/234207-050-0037B589/English-bulldog-dog.jpg"
       ],
       "isAdopted": false
     },
@@ -44,8 +44,8 @@ const jsonString = '''
       "price": 200,
       "breed": "Poodle",
       "imageUrl": [
-        "https://example.com/charlie1.jpg",
-        "https://example.com/charlie2.jpg"
+        "https://puppiezo.com/wp-content/uploads/2023/06/IMG_1833.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_IxLZ6rqgGwzD2TzVZfgnjqSmj8v5kyr8A&s"
       ],
       "isAdopted": false
     },
@@ -56,8 +56,8 @@ const jsonString = '''
       "price": 90,
       "breed": "Beagle",
       "imageUrl": [
-        "https://example.com/lucy1.jpg",
-        "https://example.com/lucy2.jpg"
+        "https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg",
+        "https://cdn.britannica.com/80/29280-050-A3A13277/Beagles-pets.jpg"
       ],
       "isAdopted": false
     },
@@ -68,8 +68,8 @@ const jsonString = '''
       "price": 180,
       "breed": "Siberian Husky",
       "imageUrl": [
-        "https://example.com/daisy1.jpg",
-        "https://example.com/daisy2.jpg"
+        "https://www.dailypaws.com/thmb/B6yWhzGpQZsg3kxMzLn-hvGIF7M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/siberian-husky-100800827-2000-9449ca147e0e4b819bce5189c2411188.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZxCC37SYP6aoMK02A8b09wlkqcSaEPwle2g&s"
       ],
       "isAdopted": false
     },
@@ -80,8 +80,8 @@ const jsonString = '''
       "price": 130,
       "breed": "Boxer",
       "imageUrl": [
-        "https://example.com/rocky1.jpg",
-        "https://example.com/rocky2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2HjTWDvq4UCq4EAjn0fHhvU_NcZiQ-C20w&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcN4Y4heda3vR7NKGe5v1TaYEhxWbMocbpvA&s"
       ],
       "isAdopted": false
     },
@@ -92,8 +92,8 @@ const jsonString = '''
       "price": 110,
       "breed": "Dachshund",
       "imageUrl": [
-        "https://example.com/molly1.jpg",
-        "https://example.com/molly2.jpg"
+        "https://i.redd.it/ty9oro089qfd1.jpeg",
+        "https://cdn.britannica.com/13/234213-050-45F47984/dachshund-dog.jpg"
       ],
       "isAdopted": false
     },
@@ -104,8 +104,8 @@ const jsonString = '''
       "price": 160,
       "breed": "Shih Tzu",
       "imageUrl": [
-        "https://example.com/bailey1.jpg",
-        "https://example.com/bailey2.jpg"
+        "https://cdn.dotpe.in/longtail/store-items/7562157/aVNsRUAg.webp",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQptrYTLvIeVhys5wzkSHeNYW4cmRgD5teVYw&s"
       ],
       "isAdopted": false
     },
@@ -116,8 +116,8 @@ const jsonString = '''
       "price": 95,
       "breed": "Chihuahua",
       "imageUrl": [
-        "https://example.com/lola1.jpg",
-        "https://example.com/lola2.jpg"
+        "https://apupabove.com/cdn/shop/articles/Chihuahua.jpg?v=1713957175&width=1600",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GyVHdXk_yuXb_j7fD_05OdpBr7g0j4O2mA&s"
       ],
       "isAdopted": false
     },
@@ -128,8 +128,8 @@ const jsonString = '''
       "price": 140,
       "breed": "Rottweiler",
       "imageUrl": [
-        "https://example.com/cooper1.jpg",
-        "https://example.com/cooper2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoMhjj4DRoGE0oOQkDKSQwAKb3y7lvlPYH_g&s",
+       
       ],
       "isAdopted": false
     },
@@ -140,8 +140,8 @@ const jsonString = '''
       "price": 100,
       "breed": "Great Dane",
       "imageUrl": [
-        "https://example.com/sadie1.jpg",
-        "https://example.com/sadie2.jpg"
+        "https://www.dogpackapp.com/blog/wp-content/uploads/2024/11/fawn-great-dane-standing-park.webp",
+        "https://images.pexels.com/photos/532310/pexels-photo-532310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
       ],
       "isAdopted": false
     },
@@ -152,8 +152,8 @@ const jsonString = '''
       "price": 170,
       "breed": "Pomeranian",
       "imageUrl": [
-        "https://example.com/toby1.jpg",
-        "https://example.com/toby2.jpg"
+        "https://patmypets.com/wp-content/uploads/elementor/thumbs/Pomeranian-Pom-Dog-Breed-Information-Characteristics-Price-qk85w1ro5me8ayocfcc157ftvxdzvrjj0gqxp6igze.png",
+        "https://cdn.britannica.com/41/233841-050-4FFECCF1/Pomeranian-dog.jpg"
       ],
       "isAdopted": false
     },
@@ -164,8 +164,8 @@ const jsonString = '''
       "price": 85,
       "breed": "Yorkshire Terrier",
       "imageUrl": [
-        "https://example.com/zoe1.jpg",
-        "https://example.com/zoe2.jpg"
+        "https://cdn.britannica.com/48/233848-050-C8254DF7/Yorkshire-Terrier-dog.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5TcPlaRTZmNm3OBoXyUfpaeY0QZvtNxwkA&s"
       ],
       "isAdopted": false
     },
@@ -176,8 +176,8 @@ const jsonString = '''
       "price": 150,
       "breed": "Labrador Retriever",
       "imageUrl": [
-        "https://example.com/duke1.jpg",
-        "https://example.com/duke2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTsfwzD60R-EqaaLoaLKfz3fI9wt-RAJxOQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRglK42QUtGAEh0AX-E5TlZFiyRu5n4X73-FA&s"
       ],
       "isAdopted": false
     },
@@ -188,8 +188,8 @@ const jsonString = '''
       "price": 120,
       "breed": "French Bulldog",
       "imageUrl": [
-        "https://example.com/luna1.jpg",
-        "https://example.com/luna2.jpg"
+        "https://cdn.britannica.com/44/233844-050-A0F9F39C/French-bulldog.jpg",
+        "https://images2.minutemediacdn.com/image/upload/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/mentalfloss/01gxxmbn1kfpvdnnd8bj.jpg"
       ],
       "isAdopted": false
     },
@@ -200,8 +200,7 @@ const jsonString = '''
       "price": 190,
       "breed": "Cocker Spaniel",
       "imageUrl": [
-        "https://example.com/jack1.jpg",
-        "https://example.com/jack2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSohs_e6LeNXXOe48J_jbjgci70jNc46L94rw&s",
       ],
       "isAdopted": false
     },
@@ -212,8 +211,7 @@ const jsonString = '''
       "price": 90,
       "breed": "Pug",
       "imageUrl": [
-        "https://example.com/mia1.jpg",
-        "https://example.com/mia2.jpg"
+        "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-sb10066858aa-001-e1693353192358.jpg",
       ],
       "isAdopted": false
     },
@@ -224,8 +222,8 @@ const jsonString = '''
       "price": 130,
       "breed": "Saint Bernard",
       "imageUrl": [
-        "https://example.com/bear1.jpg",
-        "https://example.com/bear2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0LMNZ6jPx5DT7ts2e8KV1t1xuYszi-HNvXw&s",
+        "https://cdn.britannica.com/69/235669-050-E70D097B/Saint-bernard-dog-st-bernard-head.jpg"
       ],
       "isAdopted": false
     },
@@ -236,8 +234,8 @@ const jsonString = '''
       "price": 110,
       "breed": "Border Collie",
       "imageUrl": [
-        "https://example.com/ruby1.jpg",
-        "https://example.com/ruby2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCzGDLpLNCzoHmsoQyydxf_O52jazn56CdQ&s",
+
       ],
       "isAdopted": false
     },
@@ -248,8 +246,8 @@ const jsonString = '''
       "price": 160,
       "breed": "Bull Terrier",
       "imageUrl": [
-        "https://example.com/oscar1.jpg",
-        "https://example.com/oscar2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_KarjgeKSLB63wwoMeQouZXb9EBIhrX3lhw&s",
+        "https://cdn.prod.website-files.com/651577594cea61d37cb19467/656f9355fb01568791cab1cf_Bull%20Terrier.jpg"
       ],
       "isAdopted": false
     },
@@ -260,8 +258,7 @@ const jsonString = '''
       "price": 95,
       "breed": "Maltese",
       "imageUrl": [
-        "https://example.com/coco1.jpg",
-        "https://example.com/coco2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSznVBAaAqY7w-itHeiTKVxcZqiT-XQ-smLvg&s",
       ],
       "isAdopted": false
     },
@@ -272,8 +269,8 @@ const jsonString = '''
       "price": 120,
       "breed": "Siamese Cat",
       "imageUrl": [
-        "https://example.com/roxy1.jpg",
-        "https://example.com/roxy2.jpg"
+        "https://cdn-aahmh.nitrocdn.com/mwIJloVUffDtKiCgRcivopdgojcJrVwT/assets/images/optimized/rev-31cad3f/www.cozycatfurniture.com/image/siamese-cat-cover.jpg",
+        "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-06/Siamese%201.jpg?h=c17eaee4&itok=BRsemy6v"
       ],
       "isAdopted": false
     },
@@ -284,8 +281,8 @@ const jsonString = '''
       "price": 140,
       "breed": "Persian Cat",
       "imageUrl": [
-        "https://example.com/milo1.jpg",
-        "https://example.com/milo2.jpg"
+        "https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/10_October/persians/Persian+Cat+Facts+History+Personality+and+Care+_+ASPCA+Pet+Health+Insurance+_+white+Persian+cat+resting+on+a+brown+sofa-min.jpg",
+        "https://petsworld.in/cdn/shop/articles/34_520x500_9b1aee52-f274-4d1b-be38-0e63c0c9e672.jpg?v=1734685299"
       ],
       "isAdopted": false
     },
@@ -296,8 +293,8 @@ const jsonString = '''
       "price": 80,
       "breed": "Bengal Cat",
       "imageUrl": [
-        "https://example.com/lily1.jpg",
-        "https://example.com/lily2.jpg"
+        "https://www.petterati.com/cdn/shop/articles/Picture1_2a4f89bd-acb4-42e2-8350-e025fd0fceaf.jpg?v=1686805188",
+        "https://www.shutterstock.com/image-photo/classical-persian-cat-cinnamon-ginger-600nw-2368104449.jpg"
       ],
       "isAdopted": false
     },
@@ -308,8 +305,8 @@ const jsonString = '''
       "price": 100,
       "breed": "Parrot",
       "imageUrl": [
-        "https://example.com/blue1.jpg",
-        "https://example.com/blue2.jpg"
+        "https://static.toiimg.com/thumb/111907701/111907701.jpg?height=746&width=420&resizemode=76&imgsize=42634",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfaaWiBw7elEODYlj7JTOwYwQbhNNuEO0MMg&s"
       ],
       "isAdopted": false
     },
@@ -320,8 +317,8 @@ const jsonString = '''
       "price": 90,
       "breed": "Cockatiel",
       "imageUrl": [
-        "https://example.com/sky1.jpg",
-        "https://example.com/sky2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb0YjKry50_ZLXilzTwYznA-LhouZMz3Nvsw&s",
+
       ],
       "isAdopted": false
     },
@@ -344,8 +341,7 @@ const jsonString = '''
       "price": 85,
       "breed": "Rabbit",
       "imageUrl": [
-        "https://example.com/cotton1.jpg",
-        "https://example.com/cotton2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVA46zNCYKOEiMoCAwg9YAA079qOrosGp0BQ&s",
       ],
       "isAdopted": false
     },
@@ -356,8 +352,8 @@ const jsonString = '''
       "price": 120,
       "breed": "Rabbit",
       "imageUrl": [
-        "https://example.com/thumper1.jpg",
-        "https://example.com/thumper2.jpg"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhpwtQUAVk7bV9ZDHI3xS0s8s9MH7C8_RgoA&s",
+
       ],
       "isAdopted": false
     }

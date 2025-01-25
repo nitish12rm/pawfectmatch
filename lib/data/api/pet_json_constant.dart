@@ -20,8 +20,7 @@ const jsonString = '''
       "price": 150,
       "breed": "German Shepherd",
       "imageUrl": [
-        "https://www.bellaandduke.com/wp-content/uploads/2024/10/A-guide-to-German-Shepherds-characteristics-personality-lifespan-and-more-featured-image.webp",
-        "https://cdn.britannica.com/79/232779-050-6B0411D7/German-Shepherd-dog-Alsatian.jpg"
+"https://images.pexels.com/photos/342214/pexels-photo-342214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -44,8 +43,7 @@ const jsonString = '''
       "price": 200,
       "breed": "Poodle",
       "imageUrl": [
-        "https://puppiezo.com/wp-content/uploads/2023/06/IMG_1833.jpeg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_IxLZ6rqgGwzD2TzVZfgnjqSmj8v5kyr8A&s"
+      "https://images.pexels.com/photos/1407167/pexels-photo-1407167.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -56,8 +54,7 @@ const jsonString = '''
       "price": 90,
       "breed": "Beagle",
       "imageUrl": [
-        "https://cdn.britannica.com/16/234216-050-C66F8665/beagle-hound-dog.jpg",
-        "https://cdn.britannica.com/80/29280-050-A3A13277/Beagles-pets.jpg"
+       "https://images.pexels.com/photos/30372653/pexels-photo-30372653/free-photo-of-beagle-dog-in-lush-garden-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -68,8 +65,7 @@ const jsonString = '''
       "price": 180,
       "breed": "Siberian Husky",
       "imageUrl": [
-        "https://www.dailypaws.com/thmb/B6yWhzGpQZsg3kxMzLn-hvGIF7M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/siberian-husky-100800827-2000-9449ca147e0e4b819bce5189c2411188.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZxCC37SYP6aoMK02A8b09wlkqcSaEPwle2g&s"
+       "https://images.pexels.com/photos/3715587/pexels-photo-3715587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -92,8 +88,7 @@ const jsonString = '''
       "price": 110,
       "breed": "Dachshund",
       "imageUrl": [
-        "https://i.redd.it/ty9oro089qfd1.jpeg",
-        "https://cdn.britannica.com/13/234213-050-45F47984/dachshund-dog.jpg"
+        "https://images.pexels.com/photos/1042436/pexels-photo-1042436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -139,8 +134,7 @@ const jsonString = '''
       "price": 100,
       "breed": "Great Dane",
       "imageUrl": [
-        "https://www.dogpackapp.com/blog/wp-content/uploads/2024/11/fawn-great-dane-standing-park.webp",
-        "https://images.pexels.com/photos/532310/pexels-photo-532310.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        "https://images.pexels.com/photos/28479799/pexels-photo-28479799/free-photo-of-majestic-great-dane-standing-on-lawn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -151,8 +145,7 @@ const jsonString = '''
       "price": 170,
       "breed": "Pomeranian",
       "imageUrl": [
-        "https://patmypets.com/wp-content/uploads/elementor/thumbs/Pomeranian-Pom-Dog-Breed-Information-Characteristics-Price-qk85w1ro5me8ayocfcc157ftvxdzvrjj0gqxp6igze.png",
-        "https://cdn.britannica.com/41/233841-050-4FFECCF1/Pomeranian-dog.jpg"
+        "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -163,8 +156,7 @@ const jsonString = '''
       "price": 85,
       "breed": "Yorkshire Terrier",
       "imageUrl": [
-        "https://cdn.britannica.com/48/233848-050-C8254DF7/Yorkshire-Terrier-dog.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu5TcPlaRTZmNm3OBoXyUfpaeY0QZvtNxwkA&s"
+        "https://images.pexels.com/photos/1420405/pexels-photo-1420405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -187,8 +179,7 @@ const jsonString = '''
       "price": 120,
       "breed": "French Bulldog",
       "imageUrl": [
-        "https://cdn.britannica.com/44/233844-050-A0F9F39C/French-bulldog.jpg",
-        "https://images2.minutemediacdn.com/image/upload/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/mentalfloss/01gxxmbn1kfpvdnnd8bj.jpg"
+        "https://images.pexels.com/photos/2171583/pexels-photo-2171583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -210,7 +201,7 @@ const jsonString = '''
       "price": 90,
       "breed": "Pug",
       "imageUrl": [
-        "https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-sb10066858aa-001-e1693353192358.jpg"
+"https://images.pexels.com/photos/1591939/pexels-photo-1591939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },
@@ -280,8 +271,7 @@ const jsonString = '''
       "price": 140,
       "breed": "Persian Cat",
       "imageUrl": [
-        "https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/10_October/persians/Persian+Cat+Facts+History+Personality+and+Care+_+ASPCA+Pet+Health+Insurance+_+white+Persian+cat+resting+on+a+brown+sofa-min.jpg",
-        "https://petsworld.in/cdn/shop/articles/34_520x500_9b1aee52-f274-4d1b-be38-0e63c0c9e672.jpg?v=1734685299"
+        "https://images.pexels.com/photos/1687831/pexels-photo-1687831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       ],
       "isAdopted": false
     },

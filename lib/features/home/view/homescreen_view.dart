@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:pawfectmatch/core/constants/color_constants.dart';
 import 'package:pawfectmatch/features/details/view/detailscreen_view.dart';
 import 'package:pawfectmatch/features/home/view/search_screen_view.dart';
@@ -23,7 +23,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   double? _maxPrice;
   String? _selectedBreed;
   int _currentPage = 1;
-  final int _itemsPerPage = 10;
+  late int _itemsPerPage;
 
   // Add a TextEditingController for the search field
   final TextEditingController _searchController = TextEditingController();
@@ -247,7 +247,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-
+    final crossAxisCount = (kIsWeb)
+        ? (screenWidth > 1200)
+        ? 4
+        : (screenWidth > 800)
+        ? 3
+        : 2
+        : 2;
+    _itemsPerPage = crossAxisCount*3;
     final petsResult = ref.watch(petViewModelProvider);
     return Scaffold(
       backgroundColor: Colors.white,
@@ -272,7 +279,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           // Collapsible Section (Search Bar and Categories)
           SliverAppBar(
             backgroundColor: Colors.transparent,
-            expandedHeight: 260,
+            expandedHeight: 300,
             floating: false,
             pinned: false,
             flexibleSpace: FlexibleSpaceBar(
@@ -317,7 +324,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: IconButton(
-                            icon: const Icon(Iconsax.setting_3, size: 25, color: Colors.white),
+                            icon: const Icon(Icons.filter_alt, size: 25, color: Colors.white),
                             onPressed: () {
                               _showFilterDialog(context); // Open the filter dialog
                             },
@@ -432,8 +439,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   sliver: SliverGrid(
                     gridDelegate:
-                    const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
+                    SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: crossAxisCount,
                       childAspectRatio: 0.7,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,

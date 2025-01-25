@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:pawfectmatch/core/constants/color_constants.dart';
 import 'package:confetti/confetti.dart';
 
@@ -156,7 +155,7 @@ isAdopted=widget.pet.isAdopted;
                           ),
                           child: const Padding(
                             padding: EdgeInsets.all(10.0),
-                            child: Icon(Iconsax.man),
+                            child: Icon(Icons.person),
                           ),
                         ),
                       ],
@@ -176,7 +175,7 @@ isAdopted=widget.pet.isAdopted;
                           child: const Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Icon(
-                              Iconsax.profile_circle,
+                              Icons.person_pin,
                               size: 20,
                             ),
                           ),
